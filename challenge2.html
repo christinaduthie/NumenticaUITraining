@@ -17,10 +17,13 @@
         // Function to add the digits
         function sumDigits(splitDigits) {
             let sum = 0;
+            let expression="";
             for (i = 0; i < splitDigits.length; i++) {
                 sum = sum + parseInt(splitDigits[i])
+                
             }
-            console.log(sum)
+            expression = splitDigits.join("+")
+            console.log(sum, expression)
         }
     </script>
 </body>
