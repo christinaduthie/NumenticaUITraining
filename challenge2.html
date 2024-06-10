@@ -8,21 +8,20 @@
 <body>
     <script>
         //Get input from user
-        let input = prompt("Enter input number");
+        const input = prompt("Enter input number");
         // split the input into single digits
-        splitDigits = input.toString().split('');
+        const splitDigits = input.toString().split('');
         // Function call
         sumDigits(splitDigits);
 
         // Function to add the digits
         function sumDigits(splitDigits) {
             let sum = 0;
-            let expression="";
             for (i = 0; i < splitDigits.length; i++) {
                 sum = sum + parseInt(splitDigits[i])
                 
             }
-            expression = splitDigits.join("+")
+            const expression = splitDigits.join("+")
             console.log(sum, expression)
         }
     </script>

@@ -9,23 +9,23 @@
 <body>
     <script>
         //Get Array from user
-        let input = prompt("Enter input array seperated by space");
-        let inputArray = input.split(" ");
-        let len = inputArray.length;
+        const input = prompt("Enter input array seperated by space");
+        const inputArray = input.split(" ");
+        const len = inputArray.length;
         //function call
-        posNumArray(inputArray, len)
+        const outputArr = posNumArray(inputArray, len)
+        console.log(outputArr)
 
         // Function to check if each element in the Array is positive
         // and add the positive elements in new Array 
         function posNumArray(inputArray, len) {
-            outputArray = []
+            const outputArray = []
             for (i = 0; i < len; i++) {
                 if (inputArray[i] >= 0) {
                     outputArray.push(inputArray[i])
                 }
             }
-            console.log(inputArray)
-            console.log(outputArray)
+            return outputArray;
         }
     </script>
 </body>

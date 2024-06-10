@@ -9,15 +9,15 @@
 <body>
     <script>
         //Get Array from user
-        let input = prompt("Enter input array seperated by space");
-        let inputArray = input.split(" ");
-        let len = inputArray.length;
+        const input = prompt("Enter input array seperated by space");
+        const inputArray = input.split(" ");
+        const len = inputArray.length;
         //Function Call
         removeDuplicates(inputArray, len)
 
         // Function to remove the duplicates 
         function removeDuplicates(inputArray, len) {
-            newArr=[]
+            const newArr=[]
             for (i=0;i<len;i++){
                 if (newArr.includes(inputArray[i])){
                     continue;
