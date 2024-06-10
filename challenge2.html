@@ -5,25 +5,31 @@
 <head>
     <title>Challenge 2</title>
 </head>
+
 <body>
     <script>
         //Get input from user
-        const input = prompt("Enter input number");
-        // split the input into single digits
-        const splitDigits = input.toString().split('');
-        // Function call
-        sumDigits(splitDigits);
-
-        // Function to add the digits
-        function sumDigits(splitDigits) {
+        const input = prompt("Enter input number");    
+        //Input Validation    
+        if (input.includes(" ") || isNaN(input)) {
+            console.log("Invalid Input")
+        }
+        else {
+            // split the input into single digits
+            const splitDigits = input.split('');
+            //function call
+            const output = sumOfDigits(splitDigits);
+            console.log(output);
+        }
+        // Function to add the digits       
+        function sumOfDigits(splitDigits) {
             let sum = 0;
             for (i = 0; i < splitDigits.length; i++) {
-                sum = sum + parseInt(splitDigits[i])
-                
+                    sum = sum + parseInt(splitDigits[i])
             }
-            const expression = splitDigits.join("+")    
-            console.log(sum, expression)
+            return sum;
         }
     </script>
 </body>
+
 </html>

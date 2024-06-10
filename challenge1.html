@@ -11,21 +11,25 @@
         //Get Array from user
         const input = prompt("Enter input array seperated by space");
         const inputArray = input.split(" ");
-        const len = inputArray.length;
+        // const len = inputArray.length;
         //function call
-        const outputArr = posNumArray(inputArray, len)
-        console.log(outputArr)
+        const outputArray = getPositiveNumbersFromArray(inputArray)
+        console.log(outputArray);
+
+        // variable should be a noun
+        // function should be a verb.
 
         // Function to check if each element in the Array is positive
         // and add the positive elements in new Array 
-        function posNumArray(inputArray, len) {
-            const outputArray = [];
-            for (i = 0; i < len; i++) {
+        function getPositiveNumbersFromArray(inputArray) {
+            const length = inputArray.length;
+            const newArray = [];
+            for (i = 0; i < length; i++) {
                 if (inputArray[i] >= 0) {
-                    outputArray.push(inputArray[i])
+                    newArray.push(inputArray[i])
                 }
             }
-            return outputArray;
+            return newArray;
         }
     </script>
 </body>

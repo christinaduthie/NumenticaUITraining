@@ -11,23 +11,23 @@
         //Get Array from user
         const input = prompt("Enter input array seperated by space");
         const inputArray = input.split(" ");
-        const len = inputArray.length;
         //Function Call
-        removeDuplicates(inputArray, len)
+        const output = removeDuplicatesFromArray(inputArray);
+        console.log(output);
 
         // Function to remove the duplicates 
-        function removeDuplicates(inputArray, len) {
-            const newArr=[];
-            for (i=0;i<len;i++){
-                if (newArr.includes(inputArray[i])){
+        function removeDuplicatesFromArray(inputArray) {
+            const newArray=[];
+            
+            for (i=0;i<inputArray.length;i++){
+                if (newArray.includes(inputArray[i]) || inputArray[i]==''){
                     continue;
                 }
                 else{
-                    newArr.push(inputArray[i])
+                    newArray.push(inputArray[i])
                 }
             }
-            console.log(inputArray);
-            console.log(newArr);
+            return newArray;
         }
     </script>
 </body>

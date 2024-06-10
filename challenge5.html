@@ -5,23 +5,34 @@
 <head>
     <title>Challenge 5</title>
 </head>
+
 <body>
     <script>
         //Get input string from user
-        const input = prompt("Enter a String")
+        const userInput = prompt("Enter a String")
         //Remove space between words
-        const input1 = input.split(' ').join('')
+        const input = userInput.split(' ').join('')
         //function call
-        stringLength(input1);
+        const output = characterCountInString(input);
+        console.log(output);
 
         //function to count the number of letters in a string
-        function stringLength(input1){
-            let count =0;
-            for (i=0;i<input1.length;i++){
-                count = count + 1;  
+        function characterCountInString(input) {
+            let count = 0;
+            for (i = 0; i < input.length; i++) {
+                character = input.charCodeAt(input[i])
+                //Check if element is not a alphabet
+                if (!(character >= 65 && character <= 90) && !(character >= 97 && character <= 122)) {
+                    return "Invalid Input";
+                    break;
+                }
+                else {
+                    count = count + 1;
+                }
             }
-            console.log(count);
+            return count;
         }
     </script>
 </body>
+
 </html>
