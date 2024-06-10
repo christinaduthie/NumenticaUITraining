@@ -1,0 +1,38 @@
+<!-- Interchange an array to the next item in array -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 3</title>
+</head>
+<body>
+    <script>
+        //Get input Array and index position from user
+        let input = prompt("Enter an array seperated by space")
+        let inputArray = input.split(" ");
+        let indexPosition = prompt("Enter the index position")
+        //Function call
+        interchange(inputArray, indexPosition)
+
+        function interchange(inputArray, indexPosition){
+            let temp;
+            //If input is the last item in the array, interchamge with the first element of the array
+            if (indexPosition == inputArray.length){
+                temp = inputArray[indexPosition-1];
+                inputArray[indexPosition-1] = inputArray[0];
+                inputArray[0] = temp;
+                console.log(inputArray)
+            }
+            // Interchange the element at the index position with the next element
+            else{
+                temp = inputArray[indexPosition-1];
+                inputArray[indexPosition-1] = inputArray[indexPosition];
+                inputArray[indexPosition]= temp;
+                console.log(inputArray)
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

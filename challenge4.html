@@ -1,0 +1,35 @@
+<!-- Create a Function to remove duplicates in array -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Challenge 4</title>
+</head>
+
+<body>
+    <script>
+        //Get Array from user
+        let input = prompt("Enter input array seperated by space");
+        let inputArray = input.split(" ");
+        let len = inputArray.length;
+        //Function Call
+        removeDuplicates(inputArray, len)
+
+        // Function to remove the duplicates 
+        function removeDuplicates(inputArray, len) {
+            newArr=[]
+            for (i=0;i<len;i++){
+                if (newArr.includes(inputArray[i])){
+                    continue;
+                }
+                else{
+                    newArr.push(inputArray[i])
+                }
+            }
+            console.log(inputArray);
+            console.log(newArr);
+        }
+    </script>
+</body>
+
+</html>

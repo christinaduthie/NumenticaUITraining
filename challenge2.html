@@ -1,0 +1,27 @@
+<!-- Create a function to find the sum of digits in a number -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 2</title>
+</head>
+<body>
+    <script>
+        //Get input from user
+        let input = prompt("Enter input number");
+        // split the input into single digits
+        splitDigits = input.toString().split('');
+        // Function call
+        sumDigits(splitDigits);
+
+        // Function to add the digits
+        function sumDigits(splitDigits) {
+            let sum = 0;
+            for (i = 0; i < splitDigits.length; i++) {
+                sum = sum + parseInt(splitDigits[i])
+            }
+            console.log(sum)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- Create a function to count the number of letters in a string -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 5</title>
+</head>
+<body>
+    <script>
+        //Get input string from user
+        let input = prompt("Enter a String")
+        //Remove space between words
+        let input1 = input.split(' ').join('')
+        //function call
+        stringLength(input1)
+
+        //function to count the number of letters in a string
+        function stringLength(input1){
+            let count =0;
+            for (i=0;i<input1.length;i++){
+                count = count + 1  
+            }
+            console.log(count)
+        }
+    </script>
+</body>
+</html>
