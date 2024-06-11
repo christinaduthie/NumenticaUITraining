@@ -1,0 +1,35 @@
+<!-- Create a function add the special character "@" at the end of each recurring character "c" in a string -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 4</title>
+</head>
+
+<body>
+    <script>
+        //Get input string from user
+        const userInput = prompt("Enter a String")
+
+        //Function call
+        const output = addSpecialCharacterInString(userInput)
+        console.log(output)
+        
+        //Function to add the special character "@" at the end of each recurring character "c"
+        function addSpecialCharacterInString(userInput){
+            const characterArray = userInput.split("")
+            for (i=0;i<characterArray.length;i++){
+                if (characterArray[i]=="c" || characterArray[i]=="C"){
+                    characterArray[i+1] = "@"
+                }
+            }
+            return characterArray.join('');
+        }
+        
+        
+        
+    </script>
+</body>
+
+</html>

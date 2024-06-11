@@ -1,0 +1,50 @@
+<!-- Add Suffix or Prefix -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 2</title>
+</head>
+
+<body>
+    <script>
+        //Get input string from user
+        const name = prompt("Enter your Name");
+        const affixes = prompt("Enter the affix. eg: Ms, Mr");
+        const affixType = prompt("Enter the affix type. eg: Prefix or Suffix");
+
+        //function call
+        const regex = /^[a-zA-Z]+$/
+        if ((regex.test(name)) && (regex.test(affixes)) && (regex.test(affixType))){
+            const output = addSuffixOrPrefix(name, affixes, affixType);
+            const titleCase = convertToTitleCase(output)
+            console.log(titleCase);
+        }
+        else { 
+            console.log("Invalid Input. Please enter string")
+        }
+
+        //function to add preefix or suffix
+        function addSuffixOrPrefix(name, affixes, affixType) {
+            if (affixType == "Prefix" || affixType == "prefix") {
+                return affixes + " " + name
+            }
+            else if (affixType == "Suffix" || affixType == "suffix") {
+                return name + " " + affixes
+            }
+            else {
+                return name
+            }
+        }
+        //function to convert string to title case
+        function convertToTitleCase(str) {
+            str = str.toLowerCase().split(' ');
+            for (let i = 0; i < str.length; i++) {
+                str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+            }
+            return str.join(' ');
+        }
+    </script>
+</body>
+
+</html>

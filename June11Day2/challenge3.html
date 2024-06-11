@@ -1,0 +1,28 @@
+<!-- Remove spaces in a string
+s -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 3</title>
+</head>
+
+<body>
+    <script>
+        //Get input string from user
+        const userInput = prompt("Enter a String")
+
+        //Function call
+        const output = removeSpacesInString(userInput)
+        console.log(output)
+        
+        //Function to remove spaces in a string
+        function removeSpacesInString(userInput){
+            return userInput.split(' ').join('')
+        }
+        
+        
+    </script>
+</body>
+
+</html>

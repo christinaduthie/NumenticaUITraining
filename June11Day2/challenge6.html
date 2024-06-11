@@ -1,0 +1,40 @@
+<!-- Find the largest number in an array according to input -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 6</title>
+</head>
+
+<body>
+    <script>
+        //Get Array from user
+        const userInput = prompt("Enter array values seperated by space").split(" ");
+        const inputArray = userInput.map(Number);
+        const nthElement = prompt("Enter which nth largest element you would like to find in the  array");
+        console.log(inputArray)
+        //Function call
+        const output = findLargestElementInArray(inputArray, nthElement);
+        console.log(output)
+
+        //function to find the nth largest element in the array
+        function findLargestElementInArray(inputArray, nthElement) {
+            let temp;
+            for (i = 0; i < inputArray.length; i++) {
+                for (j = 0; j < inputArray.length; j++) {
+                    if (inputArray[i] > inputArray[j]) {
+                        temp = inputArray[i];
+                        inputArray[i] = inputArray[j];
+                        inputArray[j] = temp;
+                    }
+                }
+            }
+            console.log(inputArray)
+            return inputArray[nthElement -1]
+        }
+
+    </script>
+</body>
+
+</html>

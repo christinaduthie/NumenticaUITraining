@@ -1,0 +1,40 @@
+<!-- Replace any numbers in a string to a character passed to the function -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 5</title>
+</head>
+
+<body>
+    <script>
+        //Get input string from user
+        const userInput = prompt("Enter a String")
+        const character = prompt("Enter the character to replace the numbers with.")
+        console.log(userInput)
+        //Function call
+        const output = replaceNumbersWithCharacter(userInput, character)
+        console.log(output)
+        
+        //Function to replace numbers with character passed in the function
+        function replaceNumbersWithCharacter(userInput, character){
+            const characterArray = userInput.split("")
+            
+             
+            for (i=0;i<characterArray.length;i++){
+                let charCode = userInput.charCodeAt(i);
+                if(charCode>=48 && charCode<=57){
+                    characterArray[i]=character;
+                }
+            }
+            return characterArray.join('');
+            
+        }
+        
+        
+        
+    </script>
+</body>
+
+</html>

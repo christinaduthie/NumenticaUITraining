@@ -1,0 +1,42 @@
+<!-- Merge two arrays and then sort the numbers from lowest to highest -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Challenge 7</title>
+</head>
+<body>
+    <script>
+        //Get Array from user
+        const userInput1 = prompt("Enter first array seperated by space").split(" ");
+        const inputArray1 = userInput1.map(Number);
+        const userInput2 = prompt("Enter second array seperated by space").split(" ");
+        const inputArray2 = userInput2.map(Number);
+        //Function call
+        const mergedArray = mergeTwoArray(inputArray1, inputArray2);
+        console.log(mergedArray)
+        const sortedArray = sortArray(mergedArray);
+        console.log("Sorted Array", sortedArray)
+
+        //function to merge two arrays
+        function mergeTwoArray(inputArray1, inputArray2) {
+            return inputArray1.concat(inputArray2)
+        }
+
+        //function to sort the array
+        function sortArray(mergedArray) {
+            let temp;
+            for (i = 0; i < mergedArray.length; i++) {
+                for (j = 0; j < mergedArray.length; j++) {
+                    if (mergedArray[i] < mergedArray[j]) {
+                        temp = mergedArray[i];
+                        mergedArray[i] = mergedArray[j];
+                        mergedArray[j] = temp;
+                    }
+                }
+            }
+            return mergedArray;
+        }
+    </script>
+</body>
+</html>
