@@ -12,26 +12,24 @@
         const userInput = prompt("Enter a String")
         //Remove space between words
         const input = userInput.split(' ').join('')
+        //Input Validation
+        const regex = /^[a-zA-Z]+$/
         //function call
         const output = characterCountInString(input);
         console.log(output);
-
         //function to count the number of letters in a string
         function characterCountInString(input) {
             let count = 0;
+            const regex = /^[a-zA-Z]+$/ 
             for (i = 0; i < input.length; i++) {
-                character = input.charCodeAt(input[i])
-                //Check if element is not a alphabet
-                if (!(character >= 65 && character <= 90) && !(character >= 97 && character <= 122)) {
-                    return "Invalid Input";
-                    break;
-                }
-                else {
+                if (regex.test(input[i])) {
                     count = count + 1;
                 }
             }
             return count;
+
         }
+
     </script>
 </body>
 

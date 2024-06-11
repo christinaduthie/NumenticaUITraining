@@ -11,11 +11,17 @@
         const userInput = prompt("Enter an array seperated by space")
         const inputArray = userInput.split(" ");
         const indexPosition = prompt("Enter the index position")
+        
         //Function call
         const output = interchangeElementInArray(inputArray, indexPosition);
         console.log(output);
 
         function interchangeElementInArray(inputArray, indexPosition){
+            const numberIndex = Number(indexPosition);
+            if (isNaN(numberIndex)) {
+                console.log("Invalid position. Please use a number");
+                return false;
+            }
             let temp;
             //If input is the last item in the array, interchamge with the first element of the array
             if (indexPosition == inputArray.length){

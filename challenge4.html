@@ -20,11 +20,9 @@
             const newArray=[];
             
             for (i=0;i<inputArray.length;i++){
-                if (newArray.includes(inputArray[i]) || inputArray[i]==''){
-                    continue;
-                }
-                else{
-                    newArray.push(inputArray[i])
+                const inputToCheck = inputArray[i];
+                if (!(newArray.includes(inputToCheck) || inputToCheck=='')) {
+                    newArray.push(inputToCheck)
                 }
             }
             return newArray;
