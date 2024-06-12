@@ -10,29 +10,34 @@
 <body>
     <script>
         //Get input string from user
-        const userInput = prompt("Enter a String")
+        const userInput = prompt("Enter a String with numbers")
         const character = prompt("Enter the character to replace the numbers with.")
-        console.log(userInput)
         //Function call
-        const output = replaceNumbersWithCharacter(userInput, character)
-        console.log(output)
-        
+        if ((userInput.length != " ") && character.length != " ")  {
+            const output = replaceNumbersWithCharacter(userInput, character)
+            console.log(output)
+        }
+        else{
+            console.log("Empty String. Please enter a string")
+        }
+
+
         //Function to replace numbers with character passed in the function
-        function replaceNumbersWithCharacter(userInput, character){
-            const characterArray = userInput.split("")    
-             
-            for (i=0;i<characterArray.length;i++){
+        function replaceNumbersWithCharacter(userInput, character) {
+            const characterArray = userInput.split("")
+
+            for (i = 0; i < characterArray.length; i++) {
                 let charCode = userInput.charCodeAt(i);
-                if(charCode>=48 && charCode<=57){
-                    characterArray[i]=character;
+                if (charCode >= 48 && charCode <= 57) {
+                    characterArray[i] = character;
                 }
             }
             return characterArray.join('');
-            
+
         }
-        
-        
-        
+
+
+
     </script>
 </body>
 

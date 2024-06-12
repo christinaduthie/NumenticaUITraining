@@ -12,8 +12,8 @@
         //Get Array from user
         const input = prompt("Enter input array seperated by space").split(" ");
         const inputArray = input.map(Number);
-        
-        if (inputArray.every(element => !isNaN(element))) {
+        console.log(input)
+        if (inputArray.every(element => !isNaN(element)) ) {
             //Function call
             const sortedArray= sortArray(inputArray)
             console.log(sortedArray)

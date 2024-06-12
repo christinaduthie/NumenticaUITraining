@@ -10,8 +10,9 @@
     <script>
         //Get input string from user
         const userInput = prompt("Enter a numbers seperated by comma")
-        if (userInput.length == " ") {
-            console.log("Empty String. Enter a string of numbers seperated by a comma.")
+        const regex = /^[a-zA-Z]+$/
+        if ((userInput.length == " ") || (regex.test(userInput))) {
+            console.log("Invalid Input. Enter a string of numbers seperated by a comma.")
         }
         else {
             //function call

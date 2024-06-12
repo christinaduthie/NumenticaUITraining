@@ -1,4 +1,4 @@
-<!--  Create a function to find the number that are common in the arrays passed -->
+<!--  Create a function to find the numbers that are common in the arrays passed -->
 
 <!DOCTYPE html>
 <html>
@@ -18,8 +18,14 @@
         if (isNumeric(inputArray1) && isNumeric(inputArray2) ) {
             //function call
             const output = findCommanElementInArray(inputArray1, inputArray2);
-            console.log(output);
-        } else {
+            if(output.length ==' '){
+                console.log("No comman numbers found.")
+            }
+            else{
+                console.log("Numbers comman in both arrays: ", output);
+            } 
+        }
+        else {
             console.log("Invalid Input. Arrays should contain only numeric values.");
         }
         // Function to validate if the array contains only numbers
@@ -40,4 +46,5 @@
         }
     </script>
 </body>
+
 </html>
