@@ -1,0 +1,36 @@
+<!-- Calculate the sum of comma limited string -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 3</title>
+</head>
+
+<body>
+    <script>
+        //Get input string from user
+        const userInput = prompt("Enter a numbers seperated by comma")
+        if (userInput.length == " ") {
+            console.log("Empty String. Enter a string of numbers seperated by a comma.")
+        }
+        else {
+            //function call
+            const inputString = userInput.split(",")
+            const output = sumOfNumbers(inputString);
+            console.log(output)
+            
+        }
+        // Function to calculate the sum of numbers
+        function sumOfNumbers(userInput) {
+            let sum = 0;
+            for (i = 0; i < userInput.length; i++) {
+                if (!isNaN(parseFloat(userInput[i]))) {
+                    sum = sum + parseFloat(userInput[i]);
+                }
+            }
+            return sum;
+        }
+    </script>
+</body>
+
+</html>

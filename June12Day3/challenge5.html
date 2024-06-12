@@ -1,0 +1,49 @@
+<!-- Return the sum of two largest numbers -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 5</title>
+</head>
+
+<body>
+    <script>
+        //Get Array from user
+        const input = prompt("Enter input array seperated by space").split(" ");
+        const inputArray = input.map(Number);
+        if (inputArray.every(element => !isNaN(element))) {
+            //Function call
+            const sortedArray= sortArray(inputArray)
+            console.log(sortedArray)
+            const output = sumofTwoLargestNumbers(sortedArray);
+            console.log("Sum of two largest numbers in an Array is", output)
+        }
+         else {
+            console.log("Invalid Input. Arrays should contain only numeric values.");
+        }
+        //function to sort the array
+        function sortArray(inputArray){
+            let temp;
+            for (i = 0; i < inputArray.length; i++) {
+                for (j = 0; j < inputArray.length; j++) {
+                    if (inputArray[i] < inputArray[j]) {
+                        temp = inputArray[i];
+                        inputArray[i] = inputArray[j];
+                        inputArray[j] = temp;
+                    }
+                }
+            }        
+            return inputArray;
+        }
+        //function to find the sum of two largest numbers in an array
+        function sumofTwoLargestNumbers(sortedArray){
+            const lastIndex= sortedArray.length-1;
+            return sortedArray[lastIndex] + sortedArray[lastIndex-1];   
+
+        }
+        
+    </script>
+</body>
+
+</html>
