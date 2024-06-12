@@ -1,5 +1,4 @@
-<!-- Remove spaces in a string
-s -->
+<!-- Remove spaces in a string -->
 <!DOCTYPE html>
 <html>
 
@@ -11,17 +10,20 @@ s -->
     <script>
         //Get input string from user
         const userInput = prompt("Enter a String")
+        if (/\d/.test(userInput)||userInput.length ==" ") {
+            console.log("The string contains numbers or is an empty string.");
+        } else {
+            //Function call
+            const output = removeSpacesInString(userInput)
+            console.log(output)
+        }
 
-        //Function call
-        const output = removeSpacesInString(userInput)
-        console.log(output)
-        
         //Function to remove spaces in a string
-        function removeSpacesInString(userInput){
+        function removeSpacesInString(userInput) {
             return userInput.split(' ').join('')
         }
-        
-        
+
+
     </script>
 </body>
 

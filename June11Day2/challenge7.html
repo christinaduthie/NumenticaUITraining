@@ -2,9 +2,11 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Challenge 7</title>
 </head>
+
 <body>
     <script>
         //Get Array from user
@@ -12,12 +14,18 @@
         const inputArray1 = userInput1.map(Number);
         const userInput2 = prompt("Enter second array seperated by space").split(" ");
         const inputArray2 = userInput2.map(Number);
-        //Function call
-        const mergedArray = mergeTwoArray(inputArray1, inputArray2);
-        console.log(mergedArray)
-        const sortedArray = sortArray(mergedArray);
-        console.log("Sorted Array", sortedArray)
-
+        if (isNumeric(inputArray1) && isNumeric(inputArray2)) {
+            //Function call
+            const mergedArray = mergeTwoArray(inputArray1, inputArray2);
+            console.log(mergedArray)
+            const sortedArray = sortArray(mergedArray);
+            console.log("Sorted Array", sortedArray)
+        } else {
+            console.log("Invalid Input. Arrays should contain only numeric values.");
+        }
+        function isNumeric(inputArrays) {
+            return inputArrays.every(element => !isNaN(element));
+        }
         //function to merge two arrays
         function mergeTwoArray(inputArray1, inputArray2) {
             return inputArray1.concat(inputArray2)
@@ -39,4 +47,5 @@
         }
     </script>
 </body>
+
 </html>

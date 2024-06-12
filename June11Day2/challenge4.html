@@ -19,8 +19,10 @@
         //Function to add the special character "@" at the end of each recurring character "c"
         function addSpecialCharacterInString(userInput){
             const characterArray = userInput.split("")
+            console.log(characterArray)
+            
             for (i=0;i<characterArray.length;i++){
-                if (characterArray[i]=="c" || characterArray[i]=="C"){
+                if ((characterArray[i]=="c" || characterArray[i]=="C") &&(characterArray[i+1] !== " ")){
                     characterArray[i+1] = "@"
                 }
             }

@@ -13,11 +13,16 @@
         const userInput = prompt("Enter array values seperated by space").split(" ");
         const inputArray = userInput.map(Number);
         const nthElement = prompt("Enter which nth largest element you would like to find in the  array");
-        console.log(inputArray)
-        //Function call
-        const output = findLargestElementInArray(inputArray, nthElement);
-        console.log(output)
-
+        
+        if ((inputArray.every(element => !isNaN(element))) && !isNaN(nthElement)){
+            console.log(inputArray)
+            //Function call
+            const output = findLargestElementInArray(inputArray, nthElement);
+            console.log(output)
+        }
+        else{
+            console.log("Invalid Input. Please enter numeric values")
+        }
         //function to find the nth largest element in the array
         function findLargestElementInArray(inputArray, nthElement) {
             let temp;
@@ -31,7 +36,7 @@
                 }
             }
             console.log(inputArray)
-            return inputArray[nthElement -1]
+            return inputArray[nthElement - 1]
         }
 
     </script>
