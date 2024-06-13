@@ -10,8 +10,8 @@
     <script>
         //Get input string from user
         const userInput = prompt("Enter a numbers seperated by comma")
-        const regex = /^[a-zA-Z]+$/
-        if ((userInput.length == " ") || (regex.test(userInput))) {
+        
+        if ((!userInput)) {
             console.log("Invalid Input. Enter a string of numbers seperated by a comma.")
         }
         else {
@@ -24,8 +24,9 @@
         // Function to calculate the sum of numbers
         function sumOfNumbers(userInput) {
             let sum = 0;
+            const regex = /^[a-zA-Z]+$/ 
             for (i = 0; i < userInput.length; i++) {
-                if (!isNaN(parseFloat(userInput[i]))) {
+                if (!isNaN(parseFloat(userInput[i])) && !(regex.test(userInput[i]))) {
                     sum = sum + parseFloat(userInput[i]);
                 }
             }

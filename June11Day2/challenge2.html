@@ -9,15 +9,14 @@
 <body>
     <script>
         //Get input string from user
-        const name = prompt("Enter your Name");
+        const name = prompt("Enter your Name").split();
         const affixes = prompt("Enter the affix. eg: Ms, Mr");
         const affixType = prompt("Enter the affix type. eg: Prefix or Suffix");
-
         //function call
         const regex = /^[a-zA-Z]+$/
-        if ((regex.test(name)) && (regex.test(affixes)) && (regex.test(affixType))){
+        if ((/[a-zA-Z]+(\s+[a-zA-Z]+)+/.test(name)) && (regex.test(affixes)) && (regex.test(affixType))){
             const output = addSuffixOrPrefix(name, affixes, affixType);
-            const titleCase = convertToTitleCase(output)
+            const titleCase = convertToTitleCase(output);
             console.log(titleCase);
         }
         else { 
@@ -26,14 +25,14 @@
 
         //function to add preefix or suffix
         function addSuffixOrPrefix(name, affixes, affixType) {
-            if (affixType == "Prefix" || affixType == "prefix") {
-                return affixes + " " + name
+            if (affixType.toLowerCase() == "prefix") {
+                return affixes + " " + name;
             }
             else if (affixType == "Suffix" || affixType == "suffix") {
-                return name + " " + affixes
+                return name + " " + affixes;
             }
             else {
-                return name
+                return name;
             }
         }
         //function to convert string to title case

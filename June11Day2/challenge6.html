@@ -15,7 +15,7 @@
         const nthElement = prompt("Enter which nth largest element you would like to find in the  array");
         console.log(userInput)
 
-        if ((inputArray.every(element => !isNaN(element))) && !isNaN(nthElement) && (userInput.length != " ") && (nthElement.length != " ")) {
+        if ((inputArray.every(element => !isNaN(element))) && !isNaN(nthElement) && (userInput) && (nthElement)) {
             //Function call
             const output = findLargestElementInArray(inputArray, nthElement);
             console.log(output)

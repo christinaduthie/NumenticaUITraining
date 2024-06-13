@@ -14,36 +14,38 @@
         const inputArray1 = userInput1.map(Number);
         const userInput2 = prompt("Enter second array seperated by space").split(" ");
         const inputArray2 = userInput2.map(Number);
-
-        if (isNumeric(inputArray1) && isNumeric(inputArray2) ) {
-            //function call
-            const output = findCommanElementInArray(inputArray1, inputArray2);
-            if(output.length ==' '){
-                console.log("No comman numbers found.")
-            }
-            else{
-                console.log("Numbers comman in both arrays: ", output);
-            } 
-        }
-        else {
-            console.log("Invalid Input. Arrays should contain only numeric values.");
-        }
-        // Function to validate if the array contains only numbers
-        function isNumeric(inputArrays) {
-            return inputArrays.every(element => !isNaN(element));
-        }
-        // Function to find the comman elements in two array
-        function findCommanElementInArray(inputArray1, inputArray2) {
-            const output = [];
-            for (i = 0; i < inputArray1.length; i++) {
-                for (j = 0; j < inputArray2.length; j++) {
-                    if (inputArray1[i] == inputArray2[j]) {
-                        output.push(inputArray1[i])
-                    }
-                }
-            }
-            return output;
-        }
+        console.log(inputArray1)
+        console.log(inputArray2)
+        console.log(userInput1)
+        // if (isNumeric(inputArray1) && isNumeric(inputArray2) || (userInput1) || (userInput2) ) {
+        //     //function call
+        //     const output = findCommanElementInArray(inputArray1, inputArray2);
+        // //     if(output.length ==' '){
+        // //         console.log("No comman numbers found.")
+        // //     }
+        // //     else{
+        //       console.log("Numbers comman in both arrays: ", output);
+        // //     } 
+        // }
+        // else {
+        //     console.log("Invalid Input. Arrays should contain only numeric values.");
+        // }
+        // // Function to validate if the array contains only numbers
+        // function isNumeric(inputArrays) {
+        //     return inputArrays.every(element => !isNaN(element));
+        // }
+        // // Function to find the comman elements in two array
+        // function findCommanElementInArray(inputArray1, inputArray2) {
+        //     const output = [];
+        //     for (i = 0; i < inputArray1.length; i++) {
+        //         for (j = 0; j < inputArray2.length; j++) {
+        //             if (inputArray1[i] == inputArray2[j]) {
+        //                 output.push(inputArray1[i])
+        //             }
+        //         }
+        //     }
+        //     return output;
+        // }
     </script>
 </body>
 

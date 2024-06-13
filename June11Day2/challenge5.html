@@ -13,7 +13,7 @@
         const userInput = prompt("Enter a String with numbers")
         const character = prompt("Enter the character to replace the numbers with.")
         //Function call
-        if ((userInput.length != " ") && character.length != " ")  {
+        if ((userInput) && character)  {
             const output = replaceNumbersWithCharacter(userInput, character)
             console.log(output)
         }

@@ -16,29 +16,29 @@
         const output = groupNamesToTheInitialCharacter(input)
 
         //function to group names according to the initial character
-        function groupNamesToTheInitialCharacter(input){
+        function groupNamesToTheInitialCharacter(inputArray){
             const finalArray=[]
             const alphabets=[]
 
-            for (i=0;i<input.length;i++){
-                let temp = input[i].charAt()
-                if(alphabets.includes(temp)){
+            for (i=0;i<inputArray.length;i++){
+                let temporaryVariable1 = inputArray[i].charAt(0)
+                if(alphabets.includes(temporaryVariable1)){
                     continue;
                 }
                 else{
-                    alphabets.push(temp)
+                    alphabets.push(temporaryVariable1)
                 }
             }
             console.log(alphabets)
             for(i=0;i<alphabets.length;i++){
-                let groupArray=[];
-                for(j=0;j<input.length;j++){
-                    let temp1=input[j].charAt()
-                    if (temp1==alphabets[i]){
-                        groupArray.push(input[j])
+                let groupSubArray=[];
+                for(j=0;j<inputArray.length;j++){
+                    let temporaryVariable2=inputArray[j].charAt(0)
+                    if (temporaryVariable2==alphabets[i]){
+                        groupSubArray.push(inputArray[j])
                     }
                 }
-                finalArray.push(groupArray)
+                finalArray.push(groupSubArray)
             }
             console.log(finalArray)
          }
