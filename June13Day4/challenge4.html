@@ -1,0 +1,47 @@
+<!-- Find the characters that are repeating the most simultaneously  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 4</title>
+</head>
+
+<body>
+    <script>
+        //Get input string from user
+        const inputString = prompt("Enter a string.").split(' ').join('');
+
+        //function to find the character that is repeating most simultaneously
+        function maxRepeatingCharactersInString(inputString) {
+            let maximumCount = 0;
+            let maxRepeatingCharacter = "";
+
+            for (i = 0; i < inputString.length; i++) {
+                let currentCount = 1;
+                //Inner loop to count if the characters are consecutive else break from the loop and move to the next character
+                for (j = i + 1; j < inputString.length; j++) {
+                    if (inputString[j] == inputString[i]) {
+                        currentCount = currentCount + 1;
+                    }
+                    else {
+                        break;
+                    }
+                }
+                if (currentCount > maximumCount) {
+                    maximumCount = currentCount;
+                    maxRepeatingCharacter = inputString[i];
+                }
+            }
+            //console.log(maximumCount)
+            return maxRepeatingCharacter;
+
+        }
+        //function call
+        const output = maxRepeatingCharactersInString(inputString);
+        console.log(output);
+
+    </script>
+</body>
+
+</html>

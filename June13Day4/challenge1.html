@@ -1,0 +1,34 @@
+<!-- Write a javascript function to return number of occurance of a particular word in a sentence  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 1</title>
+</head>
+
+<body>
+    <script>
+        //Get input string from user
+        const userInput = prompt("Enter a String").split(' ').join('');
+        const wordToFindOccurance = prompt("Enter the word for which you need to find the number of occurance");
+        
+        //Function to remove spaces in a string
+        function findNumberOfOccurance(InputString,wordToFindOccurance) {
+            return InputString.split(wordToFindOccurance).length-1;
+        }
+
+        if ( !userInput) {
+            console.log("The string is an empty string.");
+        } else {
+            //Function call
+            const output = findNumberOfOccurance(userInput,wordToFindOccurance)
+            console.log(output);
+        }
+        
+
+
+    </script>
+</body>
+
+</html>

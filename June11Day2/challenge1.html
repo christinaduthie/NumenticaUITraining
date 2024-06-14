@@ -10,7 +10,9 @@
 <body>
     <script>
         //Get user input Arrays
-        const userInput1 = prompt("Enter first array seperated by space").split(" ");
+        const userInputPrompt = prompt("Enter first array seperated by space");
+        const userInput1 = userInputPrompt ? userInputPrompt.split(" ") : [];
+        console.log('user input 1', userInput1);
         const inputArray1 = userInput1.map(Number);
         const userInput2 = prompt("Enter second array seperated by space").split(" ");
         const inputArray2 = userInput2.map(Number);
@@ -19,12 +21,12 @@
         console.log(userInput1)
         // if (isNumeric(inputArray1) && isNumeric(inputArray2) || (userInput1) || (userInput2) ) {
         //     //function call
-        //     const output = findCommanElementInArray(inputArray1, inputArray2);
+        //     const output = findCommonElementInArray(inputArray1, inputArray2);
         // //     if(output.length ==' '){
-        // //         console.log("No comman numbers found.")
+        // //         console.log("No common numbers found.")
         // //     }
         // //     else{
-        //       console.log("Numbers comman in both arrays: ", output);
+        //       console.log("Numbers common in both arrays: ", output);
         // //     } 
         // }
         // else {
@@ -34,8 +36,8 @@
         // function isNumeric(inputArrays) {
         //     return inputArrays.every(element => !isNaN(element));
         // }
-        // // Function to find the comman elements in two array
-        // function findCommanElementInArray(inputArray1, inputArray2) {
+        // // Function to find the common elements in two array
+        // function findCommonElementInArray(inputArray1, inputArray2) {
         //     const output = [];
         //     for (i = 0; i < inputArray1.length; i++) {
         //         for (j = 0; j < inputArray2.length; j++) {

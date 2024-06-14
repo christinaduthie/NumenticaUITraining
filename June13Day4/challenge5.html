@@ -1,0 +1,40 @@
+<!-- Find sum of multiples  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 5</title>
+</head>
+
+<body>
+    <script>
+        //Get input string from user
+        const multiplicand = prompt("Enter the Multiplicand");
+        const multiplier = prompt("Enter the Multiplier ");
+
+        //Function to find the sum of multiples
+        function sumOfMultiples(multiplicand, multiplier) {
+            let sum = 0;
+            for (i = 1; i <= multiplier; i++) {
+                let product = multiplicand * i;
+                sum = sum + product;
+            }
+            return sum;
+        }
+        if (!isNaN(multiplicand) && !isNaN(multiplier)) {
+            //Function call
+            const output = sumOfMultiples(multiplicand, multiplier)
+            console.log(output)
+        }
+        else {
+            console.log("Invalid Input. Please enter a number")
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
