@@ -9,9 +9,23 @@
 <body>
     <script>
         //Get input from user
-        const input = prompt("Enter input number");    
-        
-        
+        const input = prompt("Enter Phone number");    
+        //Input Validation    
+        if (input.includes(" ") || isNaN(input) || input.length !=10) {
+            console.log("Invalid Input. Enter 10 digit number")
+        }
+        else {
+            // split the phone number into single digits
+            const splitPhoneNumber = input.split('');
+            //function call
+            const output = convertToUSPhoneFormat(splitPhoneNumber);
+            console.log(output);
+        }
+        //function to convert phone number to US phone format
+        function convertToUSPhoneFormat(splitPhoneNumber){
+            const USphoneFormat = "("+splitPhoneNumber.slice(0,3).join('') +")" + splitPhoneNumber.slice(3,6).join('') + "-" + splitPhoneNumber.slice(6,9).join('');
+            return USphoneFormat;
+        }   
     </script>
 </body>
 

@@ -1,0 +1,51 @@
+<!-- Check if the number is in range. For example: checkInRange([1, 10], 4)  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 4</title>
+</head>
+
+<body>
+    <script>
+        //Get range from user
+        const userInput1 = Number(prompt("Enter the lower range number"));
+        const userInput2 = Number(prompt("Enter the upper range number"));
+        const userInput3 = Number(prompt("Enter the number to check if it is in range"));
+      
+
+        //Function to check if the number is in range.
+        function isNumberInRange(lowerRange, upperRange, checkNumber) { 
+            if(checkNumber >= lowerRange && checkNumber <= upperRange){
+                return "Number in range"
+            }
+            else{
+                return "Number not in range"
+            }
+        }
+
+        if (!isNaN(userInput1) && !isNaN(userInput2)) {
+            //function call
+            if (userInput1 > userInput2) {
+                const output = isNumberInRange(userInput2, userInput1, userInput3)
+                
+                console.log(output)
+            }
+            else {
+                const output = isNumberInRange(userInput1, userInput2, userInput3)  
+                console.log(output)
+            }            
+            
+        }
+        else {
+            console.log("Invalid Input. Please enter a number")
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

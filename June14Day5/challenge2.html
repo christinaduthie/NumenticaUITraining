@@ -1,0 +1,36 @@
+<!-- Convert to minutes -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 2</title>
+</head>
+
+<body>
+    <script>
+        //Get input from user
+        const input = prompt("Enter time to convert to minutes. Eg. 2:30 ").split(':');
+        const inputArray = input.map(Number);
+        if (inputArray[0] > 24 || inputArray[0] < 0 || inputArray[1] > 60 || inputArray[1] < 0 || inputArray.length > 2) {
+            console.log("Invalid Input.Please enter time in this format: 2:30");
+        }
+        else {
+            const output = convertToMinutes(inputArray);
+            console.log(output);
+        }
+        //function to convert time to minutes
+        function convertToMinutes(inputArray) {
+            if (inputArray.every(element => !isNaN(element))) {
+                const minutes = (inputArray[0] * 60) + inputArray[1];
+                return minutes + " minutes";
+            }
+            else{
+                return "Invalid Input. Please enter only numbers."
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!-- Get the result of the array in multiples
+For example: [2, 5];
+Result: [2, 4, 6, 8, 10] -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 3</title>
+</head>
+
+<body>
+    <script>
+        //Get multiplicand and multiplier from user
+        const multiplicand = prompt("Enter the Multiplicand");
+        const multiplier = prompt("Enter the Multiplier ");
+
+        //Function to get an array of multiples given a multiplicand and mulitplier
+        function arrayOfMulitples(multiplicand, multiplier) {
+            let finalArrayOfMultiples = [];
+            for (i = 1; i <= multiplier; i++) {
+                finalArrayOfMultiples.push(multiplicand * i);
+            }
+            return finalArrayOfMultiples;
+        }
+
+        if (!isNaN(multiplicand) && !isNaN(multiplier)) {
+            //Function call
+            const output = arrayOfMulitples(multiplicand, multiplier)
+            console.log(output)
+        }
+        else {
+            console.log("Invalid Input. Please enter a number")
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

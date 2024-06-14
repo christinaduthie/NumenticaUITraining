@@ -1,0 +1,45 @@
+<!-- Remove zeros either trailing / leading -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 5</title>
+</head>
+
+<body>
+    <script>
+        //Get range from user
+        const userInput= prompt("Enter a number.");
+        const userChoice = prompt("Enter either 'trailing' or 'leading'.")
+        
+        //function call
+        const output = removeTrailingOrLeadingZeros(userInput,userChoice);
+        console.log(output);
+        //function to remove either trialing or leading zeros.
+        function removeTrailingOrLeadingZeros(inputNumber, inputchoice){
+            if(inputchoice.toLowerCase() == "trailing"){
+                for(i=inputNumber.length;i>=0;i--){
+                    if(inputNumber[i] == 0){
+                        inputNumber=inputNumber.slice(-1)
+                        console.log(inputNumber)
+                    }
+                    else{
+                        break;
+                    }
+                }
+                // console.log(inputNumber)
+                // return inputNumber;
+            }
+            else if(inputchoice.toLowerCase() == "leading"){
+                return (Number(inputNumber));
+            }
+            else{
+                return "Invalid Choice."
+            }
+        }
+
+    </script>
+</body>
+
+</html>
