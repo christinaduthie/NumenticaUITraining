@@ -1,0 +1,35 @@
+<!-- Repeat string. For example: repeat(“arun”, 3); output “arunarunarun”; -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 7</title>
+</head>
+
+<body>
+    <script>
+        //Get input from user
+        const inputString = prompt("Enter string").split(' ').join('');    
+        const repeatValue = Number(prompt("Enter the number of times the string should repeat."))
+        //Input Validation    
+        if (!isNaN(inputString) || isNaN(repeatValue)) {
+            console.log("Invalid Input.")
+        }
+        else {
+            //function call
+            const output = repeatString(inputString,repeatValue);
+            console.log(output);
+        }
+        //function to repeat a string for a particular number of times
+        function repeatString(inputString,repeatValue){
+            let finalString = '';
+            for(i=0;i<repeatValue;i++){
+                finalString=finalString+inputString;
+            }
+            return finalString;
+        }   
+    </script>
+</body>
+
+</html>
