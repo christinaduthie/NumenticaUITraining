@@ -9,6 +9,18 @@
 
 <body>
     <script>
+        //function to convert time to minutes
+        function convertToMinutes(inputArray) {
+            if (inputArray.every(element => !isNaN(element))) {
+                const minutes = (inputArray[0] * 60) + inputArray[1];
+                return minutes + " minutes";
+            }
+            else {
+                return "Invalid Input. Please enter only numbers."
+            }
+
+        }
+
         //Get input from user
         const input = prompt("Enter time to convert to minutes. Eg. 2:30 ").split(':');
         const inputArray = input.map(Number);
@@ -18,17 +30,6 @@
         else {
             const output = convertToMinutes(inputArray);
             console.log(output);
-        }
-        //function to convert time to minutes
-        function convertToMinutes(inputArray) {
-            if (inputArray.every(element => !isNaN(element))) {
-                const minutes = (inputArray[0] * 60) + inputArray[1];
-                return minutes + " minutes";
-            }
-            else{
-                return "Invalid Input. Please enter only numbers."
-            }
-
         }
     </script>
 </body>

@@ -9,6 +9,16 @@
 
 <body>
     <script>
+        
+        //function to repeat a string for a particular number of times
+        function repeatString(inputString,repeatValue){
+            let finalString = '';
+            for(i=0;i<repeatValue;i++){
+                finalString=finalString+inputString;
+            }
+            return finalString;
+        }   
+        
         //Get input from user
         const inputString = prompt("Enter string").split(' ').join('');    
         const repeatValue = Number(prompt("Enter the number of times the string should repeat."))
@@ -21,14 +31,6 @@
             const output = repeatString(inputString,repeatValue);
             console.log(output);
         }
-        //function to repeat a string for a particular number of times
-        function repeatString(inputString,repeatValue){
-            let finalString = '';
-            for(i=0;i<repeatValue;i++){
-                finalString=finalString+inputString;
-            }
-            return finalString;
-        }   
     </script>
 </body>
 

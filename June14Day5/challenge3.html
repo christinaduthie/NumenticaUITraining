@@ -1,6 +1,4 @@
-<!-- Get the result of the array in multiples
-For example: [2, 5];
-Result: [2, 4, 6, 8, 10] -->
+<!-- Get the result of the array in multiples -->
 
 <!DOCTYPE html>
 <html>
@@ -11,9 +9,6 @@ Result: [2, 4, 6, 8, 10] -->
 
 <body>
     <script>
-        //Get multiplicand and multiplier from user
-        const multiplicand = prompt("Enter the Multiplicand");
-        const multiplier = prompt("Enter the Multiplier ");
 
         //Function to get an array of multiples given a multiplicand and mulitplier
         function arrayOfMulitples(multiplicand, multiplier) {
@@ -23,7 +18,10 @@ Result: [2, 4, 6, 8, 10] -->
             }
             return finalArrayOfMultiples;
         }
-
+        
+        //Get multiplicand and multiplier from user
+        const multiplicand = prompt("Enter the Multiplicand");
+        const multiplier = prompt("Enter the Multiplier ");
         if (!isNaN(multiplicand) && !isNaN(multiplier)) {
             //Function call
             const output = arrayOfMulitples(multiplicand, multiplier)
