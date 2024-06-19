@@ -9,23 +9,6 @@
 
 <body>
     <script>
-        //Get input string from user
-        const userInput = prompt("Enter a String");
-        const userChoice = prompt("Enter 'Encode' or 'Decode");
-        const encodeOrDecodeValue = prompt("Enter the encode or decode value");
-        //Function call
-        if (userChoice.toLowerCase() == 'decode') {
-            const output = decodeString(userInput, encodeOrDecodeValue);
-            console.log(output);
-        }
-        else if (userChoice.toLowerCase() == 'encode') {
-            const output = encodeString(userInput, encodeOrDecodeValue);
-            console.log(output)
-        }
-        else {
-            console.log("Neither Encode or decode")
-        }
-
         // Function to decode the string
         function decodeString(userInput, encodeOrDecodeValue) {
             const userInputArray = userInput.split("")
@@ -53,6 +36,23 @@
 
             }
             return userInputArray.join('');
+        }
+        
+        //Get input string from user
+        const userInput = prompt("Enter a String");
+        const userChoice = prompt("Enter 'Encode' or 'Decode");
+        const encodeOrDecodeValue = prompt("Enter the encode or decode value");
+        //Function call
+        if (userChoice.toLowerCase() == 'decode') {
+            const output = decodeString(userInput, encodeOrDecodeValue);
+            console.log(output);
+        }
+        else if (userChoice.toLowerCase() == 'encode') {
+            const output = encodeString(userInput, encodeOrDecodeValue);
+            console.log(output)
+        }
+        else {
+            console.log("Neither Encode or decode")
         }
     </script>
 </body>

@@ -9,17 +9,6 @@
 
 <body>
     <script>
-        //Get Array from user
-        const input = prompt("Enter input array seperated by space").split(" ");
-        const inputArray = input.map(Number);
-        if (inputArray.every(element => !isNaN(element))) {
-            //Function call
-            const output = findMultiples(inputArray)
-            console.log(output)
-        }
-        else {
-            console.log("Invalid Input. Arrays should contain only numeric values.");
-        }
         //function to print the mulitples
         function findMultiples(inputArray) {
             let finalArray = {};
@@ -36,6 +25,19 @@
             }
             return finalArray;
         }
+        
+        //Get Array from user
+        const input = prompt("Enter input array seperated by space").split(" ");
+        const inputArray = input.map(Number);
+        if (inputArray.every(element => !isNaN(element))) {
+            //Function call
+            const output = findMultiples(inputArray)
+            console.log(output)
+        }
+        else {
+            console.log("Invalid Input. Arrays should contain only numeric values.");
+        }
+        
     </script>
 </body>
 

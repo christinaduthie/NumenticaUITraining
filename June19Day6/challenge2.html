@@ -9,19 +9,6 @@
 
 <body>
     <script>
-        //Get Array from user
-        const input = prompt("Enter input array seperated by space").split(" ");
-        const inputArray = input.map(Number);
-        if (inputArray.every(element => !isNaN(element))) {
-            //Function call
-            const sortedArray= sortArray(inputArray)
-            console.log(sortedArray)
-            const output = sumofSmallestAndLargestNumber(sortedArray);
-            console.log("Sum of two largest numbers in an Array is", output)
-        }
-         else {
-            console.log("Invalid Input. Arrays should contain only numeric values.");
-        }
         //function to sort the array
         function sortArray(inputArray){
             let temp;
@@ -41,6 +28,19 @@
             const lastIndex= sortedArray.length-1;
             return sortedArray[lastIndex] + sortedArray[0];   
 
+        }
+        //Get Array from user
+        const input = prompt("Enter input array seperated by space").split(" ");
+        const inputArray = input.map(Number);
+        if (inputArray.every(element => !isNaN(element))) {
+            //Function call
+            const sortedArray= sortArray(inputArray)
+            console.log(sortedArray)
+            const output = sumofSmallestAndLargestNumber(sortedArray);
+            console.log("Sum of two largest numbers in an Array is", output)
+        }
+         else {
+            console.log("Invalid Input. Arrays should contain only numeric values.");
         }
         
     </script>
