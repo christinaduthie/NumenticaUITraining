@@ -1,0 +1,42 @@
+<!-- Group multiples from 1 to 10 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 5</title>
+</head>
+
+<body>
+    <script>
+        //Get Array from user
+        const input = prompt("Enter input array seperated by space").split(" ");
+        const inputArray = input.map(Number);
+        if (inputArray.every(element => !isNaN(element))) {
+            //Function call
+            const output = findMultiples(inputArray)
+            console.log(output)
+        }
+        else {
+            console.log("Invalid Input. Arrays should contain only numeric values.");
+        }
+        //function to print the mulitples
+        function findMultiples(inputArray) {
+            let finalArray = {};
+            for (i = 1; i <= 10; i++) {
+                let tempArray = [];
+                for (j = 0; j < inputArray.length; j++) {
+                    if (inputArray[j] % i == 0) {
+                        tempArray.push(inputArray[j]);
+                    } else {
+                        continue;
+                    }
+                }
+                finalArray[i] = tempArray;
+            }
+            return finalArray;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!-- Template String Replace  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 3</title>
+</head>
+
+<body>
+    <script>
+        //Function to replace a string
+        function replaceString(inputString, location, state, phoneNumber) {
+            for (i = 0; i < inputString.length; i++) {
+                if (inputString[i] == '#[location]') {
+                    inputString[i] = location;
+                }
+                else if (inputString[i] == '#[state]') {
+                    inputString[i] = state;
+                }
+                else if (inputString[i] == '#[phone]') {
+                    inputString[i] = phoneNumber;
+                }
+                else {
+                    continue;
+                }
+            }
+            return inputString.join(' ');
+        }
+        //Get input from user
+        const inputString = prompt("Enter string").split(' ');
+        const inputLocation = prompt("Enter Location");
+        const inputState = prompt("Enter State");
+        const inputPhoneNumber = prompt("Enter Phone Number");
+        const regex = /^[a-zA-Z]+$/
+        if (isNaN(inputPhoneNumber) || inputPhoneNumber.length != 10 || !(regex.test(inputLocation)) || !(regex.test(inputState))) {
+            console.log("Invalid Input. Enter string for location and state. Enter 10 digit number for phone number")
+        }
+        else {
+            //Function call
+            const output = replaceString(inputString, inputLocation, inputState, inputPhoneNumber);
+            console.log(output);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

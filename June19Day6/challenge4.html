@@ -1,0 +1,60 @@
+<!-- Encode a string in such a way that the output will be the next characters given as input -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 4</title>
+</head>
+
+<body>
+    <script>
+        //Get input string from user
+        const userInput = prompt("Enter a String");
+        const userChoice = prompt("Enter 'Encode' or 'Decode");
+        const encodeOrDecodeValue = prompt("Enter the encode or decode value");
+        //Function call
+        if (userChoice.toLowerCase() == 'decode') {
+            const output = decodeString(userInput, encodeOrDecodeValue);
+            console.log(output);
+        }
+        else if (userChoice.toLowerCase() == 'encode') {
+            const output = encodeString(userInput, encodeOrDecodeValue);
+            console.log(output)
+        }
+        else {
+            console.log("Neither Encode or decode")
+        }
+
+        // Function to decode the string
+        function decodeString(userInput, encodeOrDecodeValue) {
+            const userInputArray = userInput.split("")
+            for (i = 0; i < userInputArray.length; i++) {
+                if (userInputArray[i] == " ") {
+                    continue;
+                }
+                else {
+                    userInputArray[i] = String.fromCharCode(userInputArray[i].charCodeAt(0) - parseInt(encodeOrDecodeValue));
+                }
+
+            }
+            return userInputArray.join('');
+        }
+        //Function to Encode the string
+        function encodeString(userInput, encodeOrDecodeValue) {
+            const userInputArray = userInput.split("")
+            for (i = 0; i < userInputArray.length; i++) {
+                if (userInputArray[i] == " ") {
+                    continue;
+                }
+                else {
+                    userInputArray[i] = String.fromCharCode(userInputArray[i].charCodeAt(0) + parseInt(encodeOrDecodeValue));
+                }
+
+            }
+            return userInputArray.join('');
+        }
+    </script>
+</body>
+
+</html>
