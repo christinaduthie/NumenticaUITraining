@@ -6,6 +6,7 @@
     <title>Challenge 1</title>
 </head>
 
+
 <body>
     <script>
         //function to convert phone number to US phone format
@@ -17,7 +18,7 @@
         //Get input from user
         const input = prompt("Enter Phone number");    
         //Input Validation    
-        if (input.includes(" ") || isNaN(input) || input.length !=10) {
+        if (input.includes(" ") || isNaN(Number(input)) || input.length !=10) {
             console.log("Invalid Input. Enter 10 digit number")
         }
         else {
@@ -29,5 +30,4 @@
         }
     </script>
 </body>
-
 </html>

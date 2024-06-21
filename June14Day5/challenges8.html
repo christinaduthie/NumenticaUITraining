@@ -9,8 +9,21 @@
 
 <body>
     <script>
+
+        const numberHash = {
+            0: "Zero",
+            1: "One",
+            2: "Two",
+            3: "Three",
+            4: "Four",
+            5: "Five",
+            6: "Six",
+            7: "Seven",
+            8: "Eight",
+            9: "Nine",
+        }
         //Get input from user
-        const userInput = prompt("Enter a number").split('');
+        const userInput = prompt("Enter a number").split("");
 
         const inputArray = userInput.map(Number);
 
@@ -24,43 +37,10 @@
         }
         // Function to convert number to strings. Eg: 98-> nineeight
         function convertNumberToString(inputArray) {
-            let finalString = '';
+            let finalString = "";
             for (i = 0; i < inputArray.length; i++) {
                 let digit = inputArray[i];
-
-                switch (digit) {
-                    case 0:
-                        finalString += "Zero"
-                        break;
-                    case 1:
-                        finalString += "One"
-                        break;
-                    case 2:
-                        finalString += "Two"
-                        break;
-                    case 3:
-                        finalString += "Three"
-                        break;
-                    case 4:
-                        finalString += "Four"
-                        break;
-                    case 5:
-                        finalString += "Five"
-                        break;
-                    case 6:
-                        finalString += "Six"
-                        break;
-                    case 7:
-                        finalString += "Seven"
-                        break;
-                    case 8:
-                        finalString += "Eight"
-                        break;
-                    case 9:
-                        finalString += "Nine"
-                        break;
-                }
-
+                finalString += numberHash[digit];
             }
             return finalString;
         }

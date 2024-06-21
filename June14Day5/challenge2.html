@@ -20,11 +20,11 @@
             }
 
         }
-
         //Get input from user
-        const input = prompt("Enter time to convert to minutes. Eg. 2:30 ").split(':');
-        const inputArray = input.map(Number);
-        if (inputArray[0] > 24 || inputArray[0] < 0 || inputArray[1] > 60 || inputArray[1] < 0 || inputArray.length > 2) {
+        const input = prompt("Enter time to convert to minutes. Eg. 2:30 ")
+        const splitArray = input.split(":")
+        const inputArray = splitArray.map(Number);
+        if (inputArray[0] >= 24 || inputArray[0] < 0 || inputArray[1] > 60 || inputArray[1] < 0 || inputArray.length > 2) {
             console.log("Invalid Input.Please enter time in this format: 2:30");
         }
         else {

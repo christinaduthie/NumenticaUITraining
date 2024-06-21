@@ -11,24 +11,24 @@
         //Function to replace a string
         function replaceString(inputString, location, state, phoneNumber) {
             for (i = 0; i < inputString.length; i++) {
-                if (inputString[i] == '#[location]') {
+                if (inputString[i] == "#[location]") {
                     inputString[i] = location;
                 }
-                else if (inputString[i] == '#[state]') {
+                else if (inputString[i] == "#[state]") {
                     inputString[i] = state;
                 }
-                else if (inputString[i] == '#[phone]') {
+                else if (inputString[i] == "#[phone]") {
                     inputString[i] = phoneNumber;
                 }
                 else {
                     continue;
                 }
             }
-            return inputString.join(' ');
+            return inputString.join(" ");
         }
 
         //Get input from user
-        const inputString = prompt("Enter string").split(' ');
+        const inputString = prompt("Enter string").split(" ");
         const inputLocation = prompt("Enter Location");
         const inputState = prompt("Enter State");
         const inputPhoneNumber = prompt("Enter Phone Number");

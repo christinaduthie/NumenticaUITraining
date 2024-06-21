@@ -21,7 +21,7 @@
                 }
 
             }
-            return userInputArray.join('');
+            return userInputArray.join("");
         }
         //Function to Encode the string
         function encodeString(userInput, encodeOrDecodeValue) {
@@ -35,19 +35,20 @@
                 }
 
             }
-            return userInputArray.join('');
+            return userInputArray.join("");
         }
         
         //Get input string from user
         const userInput = prompt("Enter a String");
-        const userChoice = prompt("Enter 'Encode' or 'Decode");
+        const userChoice = prompt("Enter 'Encode' or 'Decode'");
         const encodeOrDecodeValue = prompt("Enter the encode or decode value");
+        const choice = userChoice.toLowerCase();
         //Function call
-        if (userChoice.toLowerCase() == 'decode') {
+        if (choice == "decode") {
             const output = decodeString(userInput, encodeOrDecodeValue);
             console.log(output);
         }
-        else if (userChoice.toLowerCase() == 'encode') {
+        else if (choice == "encode") {
             const output = encodeString(userInput, encodeOrDecodeValue);
             console.log(output)
         }

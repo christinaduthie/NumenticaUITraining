@@ -25,19 +25,22 @@
             }
             return finalArray;
         }
-        
+
         //Get Array from user
-        const input = prompt("Enter input array seperated by space").split(" ");
-        const inputArray = input.map(Number);
-        if (inputArray.every(element => !isNaN(element))) {
-            //Function call
-            const output = findMultiples(inputArray)
-            console.log(output)
+        const input = prompt("Enter input array seperated by space")
+        const splitNumberArray = input.split(" ").map(Number);
+        const onlyNumbersArray = [];
+        for (i = 0; i < splitNumberArray.length; i++) {
+            if (!isNaN(Number(splitNumberArray[i]))) {
+                onlyNumbersArray.push(splitNumberArray[i])
+            }
         }
-        else {
-            console.log("Invalid Input. Arrays should contain only numeric values.");
-        }
-        
+        console.log(onlyNumbersArray)
+        //Function call
+        const output = findMultiples(onlyNumbersArray)
+        console.log(output)
+
+
     </script>
 </body>
 

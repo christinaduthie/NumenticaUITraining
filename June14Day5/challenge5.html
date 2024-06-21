@@ -11,11 +11,12 @@
 
         //function to remove either trialing or leading zeros.
         function removeTrailingOrLeadingZeros(inputNumber, inputchoice) {
-            if (inputchoice.toLowerCase() == "trailing") {
+            const choice = inputchoice.toLowerCase();
+            if (choice == "trailing") {
                 console.log("test")
-                const inputNumberArray = inputNumber.split('');
+                const inputNumberArray = inputNumber.split("");
                 for (i = inputNumberArray.length - 1; i >= 0; i--) {
-                    if (inputNumberArray[i] === '0') {
+                    if (inputNumberArray[i] === "0") {
                         inputNumberArray.pop()
                     }
                     else {
@@ -25,7 +26,7 @@
 
                 return inputNumberArray.join("");
             }
-            else if (inputchoice.toLowerCase() == "leading") {
+            else if (choice == "leading") {
                 return (Number(inputNumber));
             }
             else {
@@ -34,7 +35,7 @@
         }
         //Get range from user
         const userInput = prompt("Enter a number.");
-        const userChoice = prompt("Enter either 'trailing' or 'leading'.")
+        const userChoice = prompt("Enter either trailing or leading.")
 
         //function call
         const output = removeTrailingOrLeadingZeros(userInput, userChoice);
