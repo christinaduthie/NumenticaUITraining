@@ -5,12 +5,11 @@ function findCommonInterestsInBooks(students) {
     for (let i = 0; i < students.length; i++) {
       const student = students[i];
       for (let j = 0; j < student.books.length; j++) {
-       //console.log(student.books[j])
-       //console.log(finalArray)
-        if (!(student.books[j] in finalArray)) {
-          finalArray[student.books[j]] = [];
+       const book= student.books[j];
+        if (!(book in finalArray)) {
+          finalArray[book] = [];
         }
-        finalArray[student.books[j]].push(student.name);
+        finalArray[book].push(student.name);
       }
     }
     return finalArray;
@@ -40,7 +39,8 @@ const students = [
 ];
 //Function call
 const commonInterests = findCommonInterestsInBooks(students);
-//aconsole.log(commonInterests);
+console.log(commonInterests);
+   
 
 
 

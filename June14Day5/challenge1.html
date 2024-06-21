@@ -10,9 +10,9 @@
 <body>
     <script>
         //function to convert phone number to US phone format
-        function convertToUSPhoneFormat(splitPhoneNumber){
-            const USphoneFormat = "("+splitPhoneNumber.slice(0,3).join('') +")" + splitPhoneNumber.slice(3,6).join('') + "-" + splitPhoneNumber.slice(6,9).join('');
-            return USphoneFormat;
+        function convertToUsPhoneFormat(splitPhoneNumber){
+            const usPhoneFormat = "("+splitPhoneNumber.slice(0,3).join('') +")" + splitPhoneNumber.slice(3,6).join('') + "-" + splitPhoneNumber.slice(6,9).join('');
+            return usPhoneFormat;
         } 
         
         //Get input from user
@@ -25,7 +25,7 @@
             // split the phone number into single digits
             const splitPhoneNumber = input.split('');
             //function call
-            const output = convertToUSPhoneFormat(splitPhoneNumber);
+            const output = convertToUsPhoneFormat(splitPhoneNumber);
             console.log(output);
         }
     </script>
