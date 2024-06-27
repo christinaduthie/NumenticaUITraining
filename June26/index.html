@@ -2,25 +2,32 @@
 <html>
 
 <head>
-    <title>Resume</title>
+    <title>Christina - Resume</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header-container">
         <h2 class="name">Christina Duthie</h2>
         <nav class="navigation-bar">
             <a class="navigation-bar-items" href="#about">About</a>
+            <a class="navigation-bar-items" href="#education">Education</a>
             <a class="navigation-bar-items" href="#experience">Experience</a>
+            <a class="navigation-bar-items" href="#skills">Skills</a>
             <a class="navigation-bar-items" href="#project">Projects</a>
+            <a class="navigation-bar-items" href="#contact">Contact</a>
         </nav>
     </header>
-
-    <div class="about-column">
-        <div style="background-color: rgb(209, 245, 255); height: 800px;">
-            <img src="avatar.png" alt="" class="profilePic">
+    <!-- About -->
+    <div class="about-container">
+        <div style="height: 800px;">
+            <figure>
+                <img src="avatar.png" alt="Profile Picture" class="profilePic">
+                <figcaption>Christina Duthie</figcaption>
+            </figure>
         </div>
-        <div class="about-container" id="about">
+        <div class="about-column" id="about">
             <h2>Christina Duthie</h2>
             <p>Computer Science Enthusiast</p>
             <p>
@@ -30,22 +37,21 @@
                 solutions.
             </p>
             <div>
-                <img src="linkedin.png" alt="My LinkedIn profile" class="icon"
-                    onclick="location.href='https://www.linkedin.com/in/christina-duthie/'" />
-                <img src="github.png" alt="My Githib Id" class="icon"
-                    onclick="location.href='https://www.linkedin.com/in/christina-duthie/'" />
+                <img src="linkedin.png" alt="My LinkedIn profile" class="icon" />
+                <img src="github.png" alt="My Githib Id" class="icon" />
             </div>
-
+            <button class="button">Contact Me</button>
         </div>
     </div>
-    <div class="experience-container" id="experience">
-        <h2>Experience</h2>
+    <hr>
+    <!-- Education Background -->
+    <div class="education-container" id="education">
+        <h2 style="text-align: center;">Education Background</h2>
         <section>
-            <h3>Internship</h3>
             <ul>
                 <li>
-                    <p>Feb - Mar 2023 <br />Software Developer Trainee<br /><span style="font-weight: bold;">ITOI
-                            Technologies</span></p>
+                    <p>July 2019 - May 2023 <br />Bachelor of Technology<br /><span style="font-weight: bold;">Computer
+                            Science and Engineering</span></p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
                         varius magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at
                         enim
@@ -54,84 +60,244 @@
                         sodales, velit metus pellentesque ante, ac mattis urna urna ut enim.</p>
                 </li>
                 <li>
-                    <p>Feb - Mar 2023 <br />Software Developer Trainee<br /> <span style="font-weight: bold;">Numentica
-                            UI</span></p>
+                    <p>July 2019 - May 2023 <br />Bachelor of Technology<br /><span style="font-weight: bold;">Computer
+                            Science and Engineering</span></p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
-                        varius
-                        magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
+                        varius magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at
+                        enim
                         mollis
                         pulvinar. Duis feugiat velit eget lacus tempus ullamcorper. Donec scelerisque, magna nec tempus
                         sodales, velit metus pellentesque ante, ac mattis urna urna ut enim.</p>
-
                 </li>
             </ul>
         </section>
-        <section>
-            <h3>Volunteer</h3>
-            <p>Jan - May 2024 <br />Software Developer Trainee<br />ITOI Technologies</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non varius
-                magna
-                egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim mollis pulvinar.
-                Duis
-                feugiat velit eget lacus tempus ullamcorper. Donec scelerisque, magna nec tempus sodales, velit metus
-                pellentesque ante, ac mattis urna urna ut enim.</p>
-        </section>
     </div>
+    <hr>
+    <!-- Video -->
+    <div class="video-container">
+        <video width="70%" controls>
+            <source src="SampleVideo.mp4" type="video/mp4">
+        </video>
+    </div>
+    <hr>
+    <!-- Experience -->
+    <div class="experience-container" id="experience">
+        <main>
+            <h2>Experience</h2>
+            <article>
+                <h3>Internship</h3>
+                <ul>
+                    <li>
+                        <p>Feb - Mar 2023 <br />Software Developer Trainee<br /><span style="font-weight: bold;">ITOI
+                                Technologies</span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                            varius magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at
+                            enim
+                            mollis
+                            pulvinar. Duis feugiat velit eget lacus tempus ullamcorper. Donec scelerisque, magna nec
+                            tempus
+                            sodales, velit metus pellentesque ante, ac mattis urna urna ut enim.</p>
+                    </li>
+                    <li>
+                        <p>Feb - Mar 2023 <br />Software Developer Trainee<br /> <span
+                                style="font-weight: bold;">Numentica
+                                UI</span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                            varius
+                            magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
+                            mollis
+                            pulvinar. Duis feugiat velit eget lacus tempus ullamcorper. Donec scelerisque, magna nec
+                            tempus
+                            sodales, velit metus pellentesque ante, ac mattis urna urna ut enim.</p>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h3>Volunteer</h3>
+                <p>Jan - May 2024 <br />Software Developer Trainee<br />ITOI Technologies</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non varius
+                    magna
+                    egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim mollis
+                    pulvinar.
+                    Duis
+                    feugiat velit eget lacus tempus ullamcorper. Donec scelerisque, magna nec tempus sodales, velit
+                    metus
+                    pellentesque ante, ac mattis urna urna ut enim.</p>
+            </article>
+        </main>
+    </div>
+    <hr>
+    <!-- Skills -->
+    <div class="skills-container" id="skills">
+        <h2 style="text-align: center;">Skills</h2>
+        <table>
+            <tr>
+                <th>Programming Languages:</th>
+                <td>Python</td>
+                <td>Html</td>
+                <td>CSS</td>
+                <td>Javascript</td>
+            </tr>
+            <tr>
+                <th>Operating Systems:</th>
+                <td>Mac</td>
+                <td>Windows</td>
+                <td>Linux</td>
+            </tr>
+            <tr>
+                <th>Development Software:</th>
+                <td>Microsoft Visual Studio Code</td>
+                <td>Eclipse</td>
+                <td>Google Colab</td>
+                <td>Jupyter Notebook</td>
+            </tr>
+            <tr>
+                <th>Technical skills:</th>
+                <td>Data Science</td>
+                <td>Machine Learning</td>
+                <td>Web Development</td>
+                <td>Artificial Intelligence </td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <!-- Projects -->
     <h2 style="text-align: center;">Projects</h2>
-    <div class="projects" id="project">
+    <div class="project-row" id="project">
         <div class="project-card">
             <img src="project.png" alt="Avatar" style="width:50%">
-            <div class="project-container">
-                <h4><b>Project A</b></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
-                    varius
-                    magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
-                    mollis</p>
-            </div>
+            <h4><b>Project A</b></h4>
+            <button class="button">Demo</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                varius
+                magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
+                mollis</p>
         </div>
         <div class="project-card">
             <img src="project.png" alt="Avatar" style="width:50%">
-            <div class="project-container">
-                <h4><b>Project B</b></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
-                    varius
-                    magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
-                    mollis</p>
-            </div>
+
+            <h4><b>Project B</b></h4>
+            <button class="button">Demo</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                varius
+                magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
+                mollis</p>
         </div>
         <div class="project-card">
             <img src="project.png" alt="Avatar" style="width:50%">
-            <div class="project-container">
-                <h4><b>Project C</b></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
-                    varius
-                    magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
-                    mollisLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
-                    varius
-                    magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
-                    mollis
-                </p>
-            </div>
+
+            <h4><b>Project C</b></h4>
+            <button class="button">Demo</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                varius
+                magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
+                mollisLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                varius
+                magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
+                mollis
+            </p>
         </div>
         <div class="project-card">
             <img src="project.png" alt="Avatar" style="width:50%">
-            <div class="project-container">
-                <h4><b>Project D</b></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
-                    varius
-                    magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
-                    mollis</p>
-            </div>
+            <h4><b>Project D</b></h4>
+            <button class="button">Demo</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                varius
+                magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
+                mollisLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                varius
+            </p>
         </div>
     </div>
+    <div class="project-row" id="project">
+        <div class="project-card">
+            <img src="project.png" alt="Avatar" style="width:50%">
+            <h4><b>Project A</b></h4>
+            <button class="button">Demo</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                varius
+                magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
+                mollis</p>
+        </div>
+        <div class="project-card">
+            <img src="project.png" alt="Avatar" style="width:50%">
+            <h4><b>Project B</b></h4>
+            <button class="button">Demo</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                varius
+                magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
+                mollis</p>
+        </div>
+        <div class="project-card">
+            <img src="project.png" alt="Avatar" style="width:50%">
+            <h4><b>Project C</b></h4>
+            <button class="button">Demo</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                varius
+                magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
+                mollisLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                varius
+                magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
+                mollis
+            </p>
+        </div>
+        <div class="project-card">
+            <img src="project.png" alt="Avatar" style="width:50%">
+            <h4><b>Project D</b></h4>
+            <button class="button">Demo</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                varius
+                magna egestas ac. Aenean sollicitudin finibus mauris at lacinia. Proin rhoncus dui at enim
+                mollisLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet ligula libero, non
+                varius
+            </p>
+        </div>
+    </div>
+    </div>
+    <!-- Contact -->
+    <div class="contact-container" id="contact">
+        <h2 style="text-align: center;">Contact Me</h2>
+        <img src="email.png" alt="Email icon" class="icon" />
+        <a href="mailto:christina@duthie.org">christina@duthie.org</a>
+        <img src="linkedin.png" alt="LinkedIn icon" class="icon" />
+        <a href="https://www.linkedin.com/in/christina-duthie/">LinkedIn</a>
+        <div class="contact-card">
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" class="email-input"> <br>
+                <label for="date">Date:</label>
+                <input type="date" class="date-picker"> <br>
+                <label>Send me a message:</label>
+                <textarea style="width: 250px; height: 100px;"></textarea> <br>
+                <label for="select">Service required:</label>
+                <select id="service">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select> <br>
+                <input type="radio">
+                <label>Select to recieve my blogs</label><br>
+                <button class="button">Send</button>
+            </form>
+
+        </div>
+    </div>
+    <!-- footer -->
     <footer>
         <p>Christina Duthie<br>
-            <a href="mailto:christina@duthie.org">christina@duthie.org</a>
+            <a href="tel:+8888888888">+91 8888888888</a>
         </p>
     </footer>
-
-
-
 </body>
 
 </html>
+
+<!-- <figure>
+    article 
+    select 
+     datepicker 
+     radio button 
+     combo  box  
+    main 
+    table 
+    video 
+</figure> -->

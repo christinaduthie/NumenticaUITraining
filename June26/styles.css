@@ -15,14 +15,14 @@
     text-decoration: none;
 }
 
-.about-column {
+.about-container {
     display: flex;
     margin: 30px;
     margin-top: 0;
 
 }
 
-.about-column>* {
+.about-container>* {
     flex: 1;
 }
 
@@ -35,20 +35,27 @@
     width: 60%;
 }
 
-.about-container {
-    background-color: rgb(255, 180, 180);
+.about-column {
     text-align: center;
 }
 
-.about-container h2 {
+.about-column h2 {
     margin-top: 200px;
     font-size: 3rem;
 }
 
-.about-container p {
+.about-column p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 40px;
+}
+
+.education-container {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 30px;
+    padding: 30px;
+    height: auto;
 }
 
 .experience-container {
@@ -56,31 +63,37 @@
     line-height: 1.6;
     margin: 30px;
     padding: 30px;
-    background-color: aqua;
     height: auto;
 }
-.experience-container h2{
+
+.experience-container h2 {
     text-align: center;
 }
-section{
+
+section {
     margin: 30px;
 }
-.projects {
-    background-color: rgb(254, 254, 254);
-    margin: 30px;
+
+.project-row {
     padding: 30px;
+    gap: 30px;
     display: flex;
-    gap: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px;
+    width: 90%;
+
 }
 
 .project-card {
     border: solid rgb(180, 180, 180);
     width: 25%;
-    height: auto;
-}
-
-.project-container {
     padding: 2px 16px;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 img {
@@ -93,10 +106,92 @@ footer {
     text-align: center;
     padding: 4px;
     background-color: aliceblue;
+    font-size: 20px;
 }
 
 .icon {
     height: 2rem;
     display: inline;
 
+}
+
+.contact-container {
+    margin: 250px;
+    text-align: center;
+}
+
+.contact-container a {
+    font-size: 1.1rem
+}
+
+.button {
+    height: 50px;
+    width: 140px;
+    background-color: transparent;
+    border: solid rgb(26, 26, 26);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-card {
+    border: solid rgb(180, 180, 180);
+    width: 50%;
+    padding: 15px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.email-input {
+    height: 30px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.skills-container {
+    margin: 30px;
+    margin-bottom: 100px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table,
+td,
+th {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 15px;
+
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+
+.date-picker{
+    width: 250px;
+    height: 25px;
+    margin-bottom: 20px;
+}
+select{
+    width: 250px;
+    height: 25px;
 }
